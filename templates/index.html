@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Image Generation with Animal Features Designed by 1155192043 CHEN Quanwei</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      color: #333;
+    }
+    h2 {
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    form {
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 400px;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .output {
+      margin-top: 20px;
+    }
+    .output img {
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Human Image Generation with Animal Features</h1>
+  <h1>1155192043 CHEN Quanwei</h1>
+  <h2>This may take couples of time to generate an image. Please be patient🥰</h2>
+  <form action="/generate" method="POST">
+    <label for="description">Enter a description:</label>
+    <input type="text" id="description" name="description" placeholder="e.g., A young man with cat ears">
+    <button type="submit">Generate</button>
+  </form>
+
+  {% if image_path %}
+  <div class="output">
+    <h2>Generated Image for: "{{ prompt }}"</h2>
+    <img src="{{ image_path }}" alt="Generated Image">
+  </div>
+  {% endif %}
+</body>
+</html>
