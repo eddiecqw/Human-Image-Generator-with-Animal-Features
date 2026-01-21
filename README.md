@@ -15,11 +15,23 @@ Human image generator using pretrained diffusion model and web framework 'flask'
 4.**type the descriptions** concerns the images you want\
 
 ## Description：
-Main Features that include in my project: diAusers, flask, “os”, Stable DiAusion. 
-In my project, I used the technique of stable diAusion which is an ai model that is 
-used for generating images in terms of text. This kind of generative model is 
-trained to denoise an object, like an image, in order to extract a sample of 
-interest. Until a sample is collected, the model is trained to denoise the image a 
-little at a time. In order to produce a final image that complies with the request, it 
-first paints the image with noise and random pixels. It then attempts to eliminate 
-the noise by modifying each phase.
+```python
+from flask import Flask, render_template, request, send_file
+from diffusers import StableDiffusionPipeline
+import torch
+import os
+
+# Initialize Flask app
+app = Flask(__name__)
+
+# Load the Stable Diffusion model
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(device)
+pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2")
+pipe = pipe.to(device)
+
+# Directory to save generated images
+OUTPUT_DIR = "static/generated_images"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+```
+In this project, it used the technique of stable diffusion which is an ai model that is used for generating images in terms of text. This kind of generative model is trained to denoise an object, like an image, in order to extract a sample of interest. Until a sample is collected, the model is trained to denoise the image a little at a time. In order to produce a final image that complies with the request, it first paints the image with noise and random pixels. It then attempts to eliminate the noise by modifying each phase. 
