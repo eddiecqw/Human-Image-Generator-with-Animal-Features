@@ -1,21 +1,21 @@
 # Human-Image-Generator-with-Animal-Features
 Human image generator using pretrained diffusion model and web framework 'flask' in Python and HTML\
-Before utilize the model you need to ensure you have install these libraries in your pc:\
-•	Flask: For handling the web server and routes. \
-•	Stable Diffusion (diffusers): To load and run the text-to-image model. \
-•	Torch: For running the model on GPU or CPU. \
-•	OS and UUID: For file management (saving images with unique filenames). \
-•	re: For sanitizing user input to create safe filenames.\
+## Before utilize the model there are libraries you may need to ensure you have installed:
+•	__Flask__: For handling the web server and routes. \
+•	__Stable Diffusion (diffusers)__: To load and run the text-to-image model. \
+•	__Torch__: For running the model on GPU or CPU. \
+•	__OS__ and __UUID__: For file management (saving images with unique filenames). \
+•	__re__: For sanitizing user input to create safe filenames.\
 
-Use Guidelines:
+### Use Guidelines:
 
-1.download the libraries that are included in the "requirement.txt"\
+1.download the libraries that are included in the "**requirement.txt**"\
   (pip3 install -r requirement.txt)\
-2.run the app.py\
+2.run the **app.py**\
 3.open the website that are mentioned on the terminal\
-4.type the descriptions concerns the images you want\
+4.**type the descriptions** concerns the images you want\
 
-Description：\
+### Description：\
 Main Features that include in my project: diAusers, flask, “os”, Stable DiAusion. 
 In my project, I used the technique of stable diAusion which is an ai model that is 
 used for generating images in terms of text. This kind of generative model is 
