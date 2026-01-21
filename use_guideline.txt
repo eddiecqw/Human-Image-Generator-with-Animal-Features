@@ -1,5 +1,0 @@
-1.download the libraries that are included in the "requirement.txt"
-  (pip3 install -r requirement.txt)
-2.run the app.py
-3.open the website that are mentioned on the terminal
-4.type the descriptions concerns the images you want 
