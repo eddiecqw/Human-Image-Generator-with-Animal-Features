@@ -5,17 +5,16 @@ Human image generator using pretrained diffusion model and web framework 'flask'
 •	__Stable Diffusion (diffusers)__: To load and run the text-to-image model. \
 •	__Torch__: For running the model on GPU or CPU. \
 •	__OS__ and __UUID__: For file management (saving images with unique filenames). \
-•	__re__: For sanitizing user input to create safe filenames.\
+•	__re__: For sanitizing user input to create safe filenames.
 
-### Use Guidelines:
-
+## Use Guidelines:
 1.download the libraries that are included in the "**requirement.txt**"\
   (pip3 install -r requirement.txt)\
 2.run the **app.py**\
 3.open the website that are mentioned on the terminal\
 4.**type the descriptions** concerns the images you want\
 
-### Description：\
+## Description：
 Main Features that include in my project: diAusers, flask, “os”, Stable DiAusion. 
 In my project, I used the technique of stable diAusion which is an ai model that is 
 used for generating images in terms of text. This kind of generative model is 
@@ -23,4 +22,4 @@ trained to denoise an object, like an image, in order to extract a sample of
 interest. Until a sample is collected, the model is trained to denoise the image a 
 little at a time. In order to produce a final image that complies with the request, it 
 first paints the image with noise and random pixels. It then attempts to eliminate 
-the noise by modifying each phase.\
+the noise by modifying each phase.
